@@ -1,0 +1,64 @@
+{
+  "title": "BUENAS PRÁCTICAS",
+  "subtitle": "",
+  "description": "",
+  "sections": [
+    {
+      "contentType": "text",
+      "textType": "normal",
+      "content": "1. Infografía para guiar a los ciudadanos a la correcta presentación de solicitudes de información; la misma debe ser colocada en la recepción de cada entidad en un lugar visible"
+    },
+    {
+      "contentType": "image",
+      "src": "/assets/img/pasos-para-solicitar-informacion.jpg",
+      "heigth": 1428,
+      "alt": "Pasos para solicitar información"
+    },
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "text",
+      "textType": "normal",
+      "content": "2. Realizar los cursos de la Academia Virtual de Ética y Transparencia, diseñada con el objeto de concientizar a quienes gestionan la administración pública sobre la importancia de la ética y la transparencia como indicadores fundamentales de un buen gobierno."
+    },
+    {
+      "contentType": "image",
+      "src": "/assets/img/academia-de-etica-transparencia.jpg",
+      "heigth": 479,
+      "alt": "Academia de Ética y Transparencia"
+    },
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "text",
+      "textType": "normal",
+      "content": "3. Gobierno Abierto, mediante la filosofía de Gobierno Abierto fomentar la transparencia, la rendición de cuentas y la participación ciudadana."
+    },
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "text",
+      "textType": "normal",
+      "content": "Gobierno Abierto: es aquel que promueve la transparencia a través del acceso a la información pública, la rendición de cuentas, la apertura de datos y el uso de las tecnologías; fomenta la participación y la colaboración de los ciudadanos para el mejoramiento de la gestión pública y de los servicios públicos; y brinda un espacio para el desarrollo de políticas públicas."
+    },
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "text",
+      "textType": "normal",
+      "content": "Para realizar una iniciativa de gobierno abierto puede comunicarse con la Dirección de Transparencia de la Autoridad Nacional de Transparencia y Acceso a la Información."
+    },
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "text",
+      "textType": "normal",
+      "content": "4. Creación de la Oficina de transparencia dentro de su institución; esta oficina se encargará de todos los temas relacionados a la ética, transparencia, acceso a la información, gobierno abierto, datos abiertos y protección de datos personales."
+    }
+  ]
+}

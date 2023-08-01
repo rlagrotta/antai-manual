@@ -1,0 +1,97 @@
+.mainContainer{
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  width: 100%;
+  border-radius: 8px;
+  border: 1.5px solid #FFF; ;
+  overflow: hidden;
+}
+.mainContainerSuccess{
+  border: 1.5px solid #47B881;
+}
+.mainContainerSelected{
+  transition: all 0.3s ease-in-out;
+  background-color: #FE632F;
+  border: 1.5px solid #FE632F;
+}
+.mainContainerError{
+  border: 1.5px solid #F64C4C;
+}
+/* ********************************** */
+.letterContainer,
+.letterContainer span,
+.mainContainer,
+.textContainer {
+  transition: none;
+}
+/* ********************************** */
+.letterContainer{
+  transition: all 0.3s ease-in-out;
+  width: 43px;
+  background-color: #FFF;
+  display:grid;
+  place-content: center;
+}
+.letterContainerSuccess{
+  background-color: #47B881;
+}
+.letterContainerSelected{
+  background-color: #FE632F;
+  border-right: 1.5px solid #FFFFFF;
+}
+.letterContainerError{
+  background: #F64C4C;
+}
+/* ********************************** */
+
+.letterContainer span{
+  transition: color 0.3s ease-in-out;
+  text-transform: uppercase;
+  color:#16255A;
+  font-size: 16px;
+  font-weight: 600;
+}
+.letterContainerSuccess span{
+  color: #FFF;
+}
+.letterContainerSelected span{
+  color: #FFFFFF;
+}
+.letterContainerError span{
+  color: #FFF;
+}
+/* ********************************** */
+
+.textContainer{
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+.textContainerSuccess{
+  background-color: rgba(71, 184, 129, 0.10);
+}
+.textContainerError{
+  background-color: rgba(246, 76, 76, 0.10);
+}
+/* ********************************** */
+
+.text1{
+  transition: color 0.3s ease-in-out;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFF;
+}
+/* ********************************** */
+
+.text2{
+  font-size: 14px;
+  font-weight: 400;
+  color: #D6DDF5;
+}
+.text2Selected{
+  color: #FFF;
+}

@@ -1,0 +1,40 @@
+{
+  "title": "DATOS ABIERTOS DE GOBIERNO",
+  "subtitle": "",
+  "description": "",
+  "sections": [
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "text",
+      "textType": "normal",
+      "content": "“Los Datos Abiertos de Gobierno, son los datos recolectados y/o producidos por las instituciones públicas, puestos a disposición de los ciudadanos en formatos abiertos, para que puedan ser reutilizados y redistribuidos por cualquier persona, para cualquier propósito, incluyendo el re-uso comercial, libre de costo y sin restricciones, con el fin de posibilitar la lectura, el seguimiento y combinación con otras fuentes de información para generar nuevos servicios de valor.”"
+    },
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "text",
+      "textType": "bold",
+      "content": "¿Por qué abrir datos públicos?"
+    },
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "list",
+      "content": [
+        "El Acceso a la Información es un Derecho Humano (Artículo 19 de la Declaración Universal de Derechos Humanos).",
+        "La ciudadanía conoce la información pública de manera sencilla y accesible, forma parte del proceso de uso, re uso y distribución de la información disponible y contribuye de manera activa en la creación de nuevas e innovadoras políticas públicas.",
+        "Fomentar la participación ciudadana y fortalecer la democracia.",
+        "Incrementar la transparencia y rendición de cuentas.",
+        "Impulsar el crecimiento económico, fortalecer la competitividad y promover la innovación.",
+        "Estimular una mayor eficiencia gubernamental, lo que obliga a diseñar políticas públicas en base a las necesidades de la comunidad y a mejorar los servicios públicos, en apoyo a los Objetivos de Desarrollo Sostenible (ODS), generación de conocimiento y buena gobernanza.",
+        "Emitir datos en el marco del respeto a la privacidad y protección de la información personal.",
+        "Permitir la interoperabilidad entre organizaciones y sistemas. La habilidad de integrar componentes es esencial para construir sistemas complejos, grandes y ricos en información.",
+        "Fomentar la investigación y el periodismo de datos, lo que permite recabar y analizar grandes cantidades de datos mediante software especializado para hacer comprensible la información a la comunidad a través de artículos, infografías, y visualizaciones de datos, entre otros."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+.mainContainer{
+  /* position: fixed;
+  width: 100%;
+  max-width: 1000px;
+  justify-self: center; */
+  color: #D6DDF5;
+  text-transform: uppercase;
+  line-height: 125%;
+  padding:16px;
+}
+.subContainer{
+  display: flex;
+  align-items: center;
+  gap:10px
+}
+.title{
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.08px;
+  margin-bottom: 8px;
+}
+.text{
+  min-width: max-content;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.07px;
+}

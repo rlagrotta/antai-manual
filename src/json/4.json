@@ -1,0 +1,27 @@
+{
+  "title": "OBLIGACIONES DEL OFICIAL DE INFORMACIÓN",
+  "subtitle": "",
+  "description": "",
+  "sections": [
+    {
+      "contentType": "text",
+      "textType": "bold",
+      "content": "Ley No. 33 del 255 de abril de 2013"
+    },
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "list",
+      "content": [
+        "Ser el enlace para coordinar la implementación de la Ley de Transparencia, además de los acuerdos y opiniones que disponga la Autoridad, sin perjuicio de la obligación que tiene la institución de cumplirlos.",
+        "Ser el contacto central en la institución para la recepción de solicitudes de información, para la asistencia a las personas que solicitan información y para la recepción de denuncias sobre la actuación de la institución en la divulgación de información, así como la protección de datos personales.",
+        "Revisar que las solicitudes de información cumplan con las formalidades dispuestas en la Ley de Transparencia.",
+        "Recibir y registrar todas las peticiones y solicitudes de información que se presenten ante la Autoridad.",
+        "Proporcionar al solicitante de la información un acuse de recibo para su debido seguimiento.",
+        "Dar seguimiento a las peticiones y solicitudes de información y brindar información al solicitante respecto al estado de estas.",
+        "Promover dentro de la institución las mejores prácticas en relación con la responsabilidad del mantenimiento, archivo y custodia de los documentos públicos, así como los de información confidencial o de acceso restringido."
+      ]
+    }
+  ]
+}

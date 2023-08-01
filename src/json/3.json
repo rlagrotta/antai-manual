@@ -1,0 +1,67 @@
+{
+  "title": "EL OFICIAL DE INFORMACIÓN",
+  "subtitle": "",
+  "description": "",
+  "sections": [
+    {
+      "contentType": "text",
+      "textType": "bold",
+      "content": "Ley No. 33 del 25 de abril de 2013"
+    },
+    {
+      "contentType": "text",
+      "textType": "normal",
+      "content": "Es la unidad de enlace que tiene la Autoridad Nacional de Transparencia y Acceso a la Información con todas las instituciones del Estado, la misma será coordinada por la Autoridad, y le corresponderá a cada institución la designación de este."
+    },
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "text",
+      "textType": "bold",
+      "content": "PERFIL RECOMENDADO PARA UN OFICIAL DE INFORMACIÓN"
+    },
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "list",
+      "content": [
+        "Experiencia laboral a nivel profesional en Administración, ejecución y/o evaluación de programas y proyectos.",
+        "Conocimiento en análisis y captación de datos.",
+        "Manejo de sistemas."
+      ]
+    },
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "text",
+      "textType": "normal",
+      "content": "informáticos Educación formal necesaria:"
+    },
+    {
+      "contentType": "list",
+      "content": [
+        "Título Universitario de licenciatura en Administración Pública, Administración de Empresas, Licenciatura en Derecho y Ciencias Políticas o carreras afines."
+      ]
+    },
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "text",
+      "textType": "mixed",
+      "content": [
+        {
+          "textType": "bold",
+          "content": "Nota:"
+        },
+        {
+          "textType": "normal",
+          "content": " Es preferible que la persona nombrada como Oficial de Información tenga un grado de autoridad dentro de la institución."
+        }
+      ]
+    }
+  ]
+}

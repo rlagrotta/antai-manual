@@ -1,0 +1,24 @@
+{
+  "title": "OBJETIVO",
+  "subtitle": "",
+  "description": "",
+  "sections": [
+    {
+      "contentType": "text",
+      "textType": "normal",
+      "content": "Desarrollar un instrumento técnico administrativo que permita normar los procedimientos de la Unidad de enlace denominada Oficial de Información para facilitar a toda persona el derecho de acceso a la información generada por las entidades del Estado en el ejercicio de sus funciones, propiciando la transparencia en la gestión pública; a su vez, la apertura de datos y la protección de datos personales."
+    },
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "list",
+      "content": [
+        "Establecer los procesos administrativos para gestión de solicitudes de información, trámite conforme a lo establecido en los artículos 6 y 7 de la Ley No. 6 del 22 de enero de 2002.",
+        "Establecer el procedimiento de actualización de la información obligatoria en la sección de transparencia institucional, de conformidad a los artículos 9, 10, 11, 26 y 27 de la Ley de Transparencia, para la publicación de Información por parte de las instituciones.",
+        "Orientar a los líderes de la apertura de datos abiertos (Oficial de Información) sobre la guía de apertura de datos abiertos y su plan institucional.",
+        "Definir los lineamientos sobre el tratamiento y custodia de la base de datos institucionales"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+.title{
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.08px;
+}
+.text{
+  color: #d6ddf5;
+  opacity: 0;
+  font-size: 16px;
+}
+.textShow{
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}

@@ -1,0 +1,131 @@
+{
+  "title": "TRANSPARENCIA ACTIVA",
+  "subtitle": "(Sección de Transparencia de la página web)",
+  "description": "",
+  "sections": [
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "text",
+      "textType": "normal",
+      "content": "La transparencia activa nos indica en atención al principio de publicidad, que las instituciones del Estado están obligadas a tener disponible en forma impresa, en sus respectivos sitios en Internet y a publicar periódicamente, información actualizada respecto de los temas, documentos y políticas, para conocer cómo están organizados."
+    },
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "text",
+      "textType": "normal",
+      "content": "Información de carácter obligatorio:"
+    },
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "list",
+      "content": [
+        "9.1 Reglamento Interno",
+        "9.2 Políticas Institucionales",
+        "9.3 Plan Estratégico",
+        "9.4 Manual de Procedimiento",
+        "9.5 Organigrama General",
+        "9.6 Seguimiento de Documentos",
+        "9.7 Descripción de Formularios",
+        "9.8 Reglas de Procedimientos"
+      ]
+    },
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "list",
+      "content": [
+        "10.1 Proyectos Institucionales",
+        "10.2 Estructura Presupuestaria",
+        "10.3 Estadísticas",
+        "10.4 Programas Desarrollados",
+        "10.5 Contrataciones Públicas"
+      ]
+    },
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "list",
+      "content": [
+        "11.1 Contratación de funcionarios",
+        "11.2 Designación de funcionarios",
+        "11.3 Planilla",
+        "11.4 Gastos de Representación",
+        "11.5 Costos de Viajes",
+        "11.6 Viáticos y Detalles de Viaje"
+      ]
+    },
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "list",
+      "content": [
+        "26.1 Solicitudes de Información presentadas a la Institución",
+        "26.2 Solicitudes Resueltas y Negadas",
+        "26.3 Participación Ciudadana",
+        "27.1 Código de Ética Otros."
+      ]
+    },
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "text",
+      "textType": "mixed",
+      "content": [
+        {
+          "textType": "bold",
+          "content": "Nota:"
+        },
+        {
+          "textType": "normal",
+          "content": " Toda entidad que cuente con normativas especiales que obliguen a la publicación de información deben cumplir con el principio de publicidad y poner a disposición del ciudadano la información."
+        }
+      ]
+    },
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "text",
+      "textType": "bold",
+      "content": "Procedimiento para publicar la información."
+    },
+    {
+      "contentType": "link",
+      "url": "https://www.antai.gob.pa/wp-content/uploads/2022/10/Resolucion-008-22.pdf",
+      "content": "(Resolución No. ANTAI-DS-008- 2022):"
+    },
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "list",
+      "content": [
+        "El oficial de información deberá recopilar la información de carácter obligatorio que producen los distintos departamentos, durante los 10 primeros días del mes que se esté evaluando.",
+        "La información se debe publicar según lo solicitado por la Autoridad en cuanto a las plantillas únicas y los formatos establecidos.",
+        "La carga de información se debe realizar antes del día 15 de cada mes.",
+        "De tener algún inconveniente con la carga de la información deberá notificarlo de manera formal mediante una nota dirigida a la Autoridad."
+      ]
+    },
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "break"
+    },
+    {
+      "contentType": "link",
+      "url": "https://www.antai.gob.pa/guia-del-usuario-final-de-la-plataforma-demonitoreo/",
+      "content": "Guía del Usuario Final de la Plataforma de Monitoreo"
+    }
+  ]
+}

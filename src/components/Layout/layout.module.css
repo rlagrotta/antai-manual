@@ -1,0 +1,27 @@
+.mainContainer {
+  display: grid;
+  place-content: center;
+}
+.container {
+  padding: 0 16px 0 16px;
+}
+
+.content {
+  height: calc(calc(var(--vh, 1vh) * 100) - 68px - var(--progressBarHeight));
+}
+
+.isHome.content {
+  padding-top: 16px;
+  height: calc(calc(var(--vh, 1vh) * 100) - 68px);
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 100px 100px 100px;
+  }
+  .content {
+    max-width: 1000px;
+    display: grid;
+    height: calc(100vh - 168px - var(--progressBarHeight));
+  }
+}

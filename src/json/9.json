@@ -1,0 +1,14 @@
+{
+  "title": "FLUJOGRAMA DE MONITOREO",
+  "subtitle": "",
+  "description": "",
+  "sections": [
+     {
+      "contentType": "image",
+
+      "src": "/assets/img/flujograma.jpg",
+      "heigth": 773,
+      "alt": "Flujograma de Monitoreo"
+    }
+  ]
+}
