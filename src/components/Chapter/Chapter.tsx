@@ -57,14 +57,7 @@ const SectionComponent: React.FC<Section> = ({
     case 'list':
       return <ListComponent items={content as (string | TextContent)[]} />;
     case 'image':
-      return (
-        <img
-          className={styles.image}
-          src={src as string}
-          alt={alt as string}
-         
-        />
-      );
+      return <img className={styles.image} src={src as string} alt={alt as string} />;
     case 'link':
       return (
         <Link className={styles.link} prefetch target="_blank" href={url as Url}>

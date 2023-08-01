@@ -9,6 +9,7 @@ interface ScrollContextProps {
   scrollRef: React.MutableRefObject<null | HTMLDivElement>;
   scrollUp: () => void;
   scrollDown: () => void;
+  nextPage: () => void;
 }
 
 export const ScrollContext = createContext<ScrollContextProps | null>(null);
@@ -23,6 +24,7 @@ export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
   const params = useParams();
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const [progress, setProgress] = useState(0);
+  const isFirstMount = useRef(true);
 
   const prevPage = useCallback(() => {
     if (!params?.slug) return;
@@ -47,6 +49,10 @@ export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
   }, [params?.slug, push]);
 
   useEffect(() => {
+    isFirstMount.current = false;
+  }, []);
+
+  useEffect(() => {
     const scrollElement = scrollRef.current;
     const calculateScrollDistance = () => {
       const scrollTop = scrollElement?.scrollTop ?? 0;
@@ -65,7 +71,7 @@ export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
     if (scrollRef.current) {
       const nextScrollTop = Math.max(scrollRef.current.scrollTop - 80, 0);
 
-      if (scrollRef.current.scrollTop <= 30) {
+      if (!isFirstMount.current && scrollRef.current.scrollTop <= 20) {
         prevPage();
       } else {
         scrollRef.current.scrollTo({
@@ -84,8 +90,9 @@ export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
       );
 
       if (
+        !isFirstMount.current &&
         scrollRef.current.scrollTop + scrollRef.current.clientHeight >=
-         scrollRef.current.scrollHeight - 40
+          scrollRef.current.scrollHeight - 20
       ) {
         nextPage();
       } else {
@@ -98,7 +105,7 @@ export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
   }, [nextPage]);
 
   return (
-    <ScrollContext.Provider value={{ progress, scrollRef, scrollUp, scrollDown }}>
+    <ScrollContext.Provider value={{ progress, scrollRef, scrollUp, scrollDown, nextPage }}>
       {children}
     </ScrollContext.Provider>
   );
