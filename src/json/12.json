@@ -27,5 +27,20 @@
       "textType": "normal",
       "content": "La designación de un Oficial de Protección de Datos Personales para el sector privado no es obligatoria, no obstante, si fuera el caso, la autoridad de control la tomará en cuenta como criterio para la graduación de las sanciones."
     }
-  ]
+  ],
+  "quiz": {
+    "hasQuiz": true,
+    "questions": [
+      {
+        "id": 1,
+        "correctAnswerIndex": 2,
+        "title": "¿Es obligatoria la designación de un Oficial de Protección de Datos Personales para el sector privado?",
+        "answers": [
+          "Sí, es obligatoria",
+          "Depende del tipo de entidad privada",
+          "No es obligatoria, pero se tomará en cuenta para la graduación de las sanciones"
+        ]
+      }
+    ]
+  }
 }

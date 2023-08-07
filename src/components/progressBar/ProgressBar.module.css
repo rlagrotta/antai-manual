@@ -1,12 +1,16 @@
 .mainContainer{
   /* position: fixed;
+  width: 100%;*/
+  margin: 0 auto;
   width: 100%;
   max-width: 1000px;
-  justify-self: center; */
   color: #D6DDF5;
   text-transform: uppercase;
   line-height: 125%;
   padding:16px;
+}
+.mainContainerQuiz{
+  max-width: 800px;
 }
 .subContainer{
   display: flex;

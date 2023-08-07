@@ -63,5 +63,20 @@
         }
       ]
     }
-  ]
+  ],
+  "quiz": {
+    "hasQuiz": true,
+    "questions": [
+      {
+        "id": 1,
+        "correctAnswerIndex": 1,
+        "title": "¿Cuál es la función principal del Oficial de Información según la Ley No. 33 del 25 de abril de 2013?",
+        "answers": [
+          "Coordinar directamente todas las actividades de la Autoridad Nacional de Transparencia y Acceso a la Información.",
+          "Actuar como unidad de enlace entre la Autoridad Nacional de Transparencia y Acceso a la Información y todas las instituciones del Estado.",
+          "Ser el encargado de evaluar y analizar los datos recolectados por la Autoridad Nacional de Transparencia y Acceso a la Información."
+        ]
+      }
+    ]
+  }
 }

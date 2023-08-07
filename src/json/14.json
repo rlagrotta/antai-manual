@@ -35,5 +35,20 @@
         "8. Ser la unidad de enlace con los titulares de los datos para las cuestiones relativas al tratamiento de los datos y a sus derechos."
       ]
     }
-  ]
+  ],
+  "quiz": {
+    "hasQuiz": true,
+    "questions": [
+      {
+        "id": 1,
+        "correctAnswerIndex": 1,
+        "title": "¿Cuál de las siguientes NO es una función principal del oficial de protección de datos según el Decreto Ejecutivo No. 285 de 28 de mayo de 2021?",
+        "answers": [
+          "Promover la capacitación de las personas que asuman tareas relacionadas con el tratamiento de los datos personales.",
+          "Coordinar las actividades recreativas de la entidad.",
+          "Cooperar con la autoridad de control."
+        ]
+      }
+    ]
+  }
 }

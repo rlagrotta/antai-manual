@@ -1,0 +1,30 @@
+.mainComponent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.ilustration{
+background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 280px;
+  height: 280px;
+  margin-bottom: 32px;
+}
+.successIlustration{
+  background-image: url('../../../public/assets/chapters_ilustrations/ilustraccion_De_Quiz_Success.png');
+}
+.failureIlustration{
+  background-image: url('../../../public/assets/chapters_ilustrations/Ilustracion_De_Quiz_Repetido.png');
+}
+.text{
+  margin-top: 8px;
+  color: #D6DDF5;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 20px */
+  letter-spacing: -0.08px;
+}

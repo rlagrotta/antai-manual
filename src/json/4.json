@@ -23,5 +23,20 @@
         "Promover dentro de la institución las mejores prácticas en relación con la responsabilidad del mantenimiento, archivo y custodia de los documentos públicos, así como los de información confidencial o de acceso restringido."
       ]
     }
-  ]
+  ],
+  "quiz": {
+    "hasQuiz": true,
+    "questions": [
+      {
+        "id": 1,
+        "correctAnswerIndex": 2,
+        "title": "¿Cuál es una de las obligaciones del Oficial de Información según la Ley No. 33 del 255 de abril de 2013?",
+        "answers": [
+          "Estar a cargo de todas las decisiones financieras de la institución.",
+          "Manejar las redes sociales de la institución.",
+          "Ser el contacto central en la institución para la recepción de solicitudes de información y asistencia a las personas que solicitan información."
+        ]
+      }
+    ]
+  }
 }

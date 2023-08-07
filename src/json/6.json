@@ -16,5 +16,20 @@
         "Elaborar las resoluciones declaratorias de la información que se define como carácter restringido o confidencial."
       ]
     }
-  ]
+  ],
+  "quiz": {
+    "hasQuiz": true,
+    "questions": [
+      {
+        "id": 1,
+        "correctAnswerIndex": 0,
+        "title": "¿Cuál de las siguientes es una función de las jefaturas y direcciones de una institución en relación con el Oficial de Información?",
+        "answers": [
+          "Entregar de forma oportuna, fidedigna y veraz la información solicitada por el Oficial de Información.",
+          "Entregar información sin clasificar al Oficial de Información.",
+          "Retener información a pesar de ser solicitada por el Oficial de Información."
+        ]
+      }
+    ]
+  }
 }

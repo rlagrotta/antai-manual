@@ -25,5 +25,20 @@
         "Elaborar el plan operativo y presupuesto anual para la ejecución de los programas y proyectos asignados a la unidad."
       ]
     }
-  ]
+  ],
+  "quiz": {
+    "hasQuiz": true,
+    "questions": [
+      {
+        "id": 1,
+        "correctAnswerIndex": 0,
+        "title": "¿Cuál de las siguientes es una función del Oficial de Información en la unidad de enlace?",
+        "answers": [
+          "Velar por el cumplimiento de las disposiciones legales de Transparencia y el Código de Ética, de los servidores públicos.",
+          "Encargarse del suministro de agua potable en la entidad.",
+          "Manejar las redes sociales de la entidad gubernamental."
+        ]
+      }
+    ]
+  }
 }

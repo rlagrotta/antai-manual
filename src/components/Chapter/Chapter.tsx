@@ -60,10 +60,12 @@ const SectionComponent: React.FC<Section> = ({
       return <img className={styles.image} src={src as string} alt={alt as string} />;
     case 'link':
       return (
-        <Link className={styles.link} prefetch target="_blank" href={url as Url}>
-          <span className={styles.linkText}>{content as string}</span>
-          <Image src={svgLink} alt="external link" width={15} height={15} />
-        </Link>
+        <div className={styles.linkContainer}>
+          <Link className={styles.link} prefetch target="_blank" href={url as Url}>
+            <span className={styles.linkText}>{content as string}</span>
+            <Image src={svgLink} alt="external link" width={15} height={15} />
+          </Link>
+        </div>
       );
     case 'break':
       return <br />;

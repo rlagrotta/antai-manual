@@ -10,6 +10,7 @@
   display: grid;
   place-content: center;
   text-align: center;
+  width: 100%;
 }
 .mainContainerSuccess{
   background: rgba(71, 184, 129, 0.20);

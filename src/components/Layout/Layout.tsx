@@ -12,6 +12,8 @@ interface props {
 const Layout = ({ children }: props) => {
   const currentRoute = usePathname();
   const isHome = currentRoute === '/';
+  const isQuiz = /^\/quiz\/\d+(\/[^\/]+)?\/?$/.test(currentRoute);
+  console.log(isQuiz, 'isQuiz');
   useEffect(() => {
     const handleResize = () => {
       let vh = window.innerHeight * 0.01;
@@ -26,7 +28,9 @@ const Layout = ({ children }: props) => {
     <div className={styles.mainContainer}>
       <ProgressBar />
       <div className={styles.container}>
-        <div className={`${styles.content} ${isHome && styles.isHome}`}>{children}</div>
+        <div className={`${styles.content} ${isHome && styles.isHome} ${isQuiz && styles.isQuiz} `}>
+          {children}
+        </div>
         <Footer />
       </div>
     </div>

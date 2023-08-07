@@ -56,5 +56,16 @@
         "En caso de que la información solicitada por la persona ya esté disponible\nal público en medios impresos tales como libros, compendios, trípticos,\narchivos públicos de la administración, así como también en formatos\nelectrónicos disponibles en Internet o en cualquier otro medio, se le hará\nsaber la fuente, el lugar y la forma en que puede tener acceso a dicha\ninformación previamente publicada."
       ]
     }
-  ]
+  ],
+  "quiz": {
+    "hasQuiz": true,
+    "questions": [
+      {
+        "id": 1,
+        "correctAnswerIndex": 0,
+        "title": "¿Qué tipo de transparencia permite el acceso a información pública?",
+        "answers": ["Transparencia Pasiva", "Transparencia Activa", "Transparencia Directa"]
+      }
+    ]
+  }
 }

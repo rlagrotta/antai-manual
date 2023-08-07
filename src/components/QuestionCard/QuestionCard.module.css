@@ -1,68 +1,62 @@
-.mainContainer{
+.mainContainer {
   transition: all 0.3s ease-in-out;
   display: flex;
   width: 100%;
   border-radius: 8px;
-  border: 1.5px solid #FFF; ;
+  border: 1.5px solid #fff;
   overflow: hidden;
+  cursor: pointer;
 }
-.mainContainerSuccess{
-  border: 1.5px solid #47B881;
+.mainContainerSuccess {
+  border: 1.5px solid #47b881;
 }
-.mainContainerSelected{
+.mainContainerSelected {
   transition: all 0.3s ease-in-out;
-  background-color: #FE632F;
-  border: 1.5px solid #FE632F;
+  background-color: #5469b1;
+  border: 1.5px solid #ffffff;
 }
-.mainContainerError{
-  border: 1.5px solid #F64C4C;
-}
-/* ********************************** */
-.letterContainer,
-.letterContainer span,
-.mainContainer,
-.textContainer {
-  transition: none;
+.mainContainerError {
+  border: 1.5px solid #f64c4c;
 }
 /* ********************************** */
-.letterContainer{
+.letterContainer {
   transition: all 0.3s ease-in-out;
   width: 43px;
-  background-color: #FFF;
-  display:grid;
+  background-color: #fff;
+  display: grid;
   place-content: center;
 }
-.letterContainerSuccess{
-  background-color: #47B881;
+.letterContainerSuccess {
+  background-color: #47b881;
 }
-.letterContainerSelected{
-  background-color: #FE632F;
-  border-right: 1.5px solid #FFFFFF;
+.letterContainerSelected {
+  background-color: #5469b1;
+  border-right: 1.5px solid #ffffff;
 }
-.letterContainerError{
-  background: #F64C4C;
+.letterContainerError {
+  background: #f64c4c;
 }
 /* ********************************** */
 
-.letterContainer span{
+.letterContainer span {
   transition: color 0.3s ease-in-out;
   text-transform: uppercase;
-  color:#16255A;
+  color: #16255a;
   font-size: 16px;
   font-weight: 600;
 }
-.letterContainerSuccess span{
-  color: #FFF;
+.letterContainerSuccess span {
+  color: #fff;
 }
-.letterContainerSelected span{
-  color: #FFFFFF;
+.letterContainerSelected span {
+  color: #fff;
 }
-.letterContainerError span{
-  color: #FFF;
+.letterContainerError span {
+  color: #fff;
 }
 /* ********************************** */
 
-.textContainer{
+.textContainer {
   transition: all 0.3s ease-in-out;
   width: 100%;
   padding: 16px;
@@ -71,27 +65,27 @@
   justify-content: center;
   gap: 8px;
 }
-.textContainerSuccess{
-  background-color: rgba(71, 184, 129, 0.10);
+.textContainerSuccess {
+  background-color: rgba(71, 184, 129, 0.1);
 }
-.textContainerError{
-  background-color: rgba(246, 76, 76, 0.10);
+.textContainerError {
+  background-color: rgba(246, 76, 76, 0.1);
 }
 /* ********************************** */
 
-.text1{
+.text1 {
   transition: color 0.3s ease-in-out;
   font-size: 16px;
   font-weight: 600;
-  color: #FFF;
+  color: #fff;
 }
 /* ********************************** */
 
-.text2{
+.text2 {
   font-size: 14px;
   font-weight: 400;
-  color: #D6DDF5;
+  color: #d6ddf5;
 }
-.text2Selected{
-  color: #FFF;
+.text2Selected {
+  color: #fff;
 }

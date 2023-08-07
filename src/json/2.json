@@ -20,5 +20,20 @@
         "Definir los lineamientos sobre el tratamiento y custodia de la base de datos institucionales"
       ]
     }
-  ]
+  ],
+  "quiz": {
+    "hasQuiz": true,
+    "questions": [
+      {
+        "id": 1,
+        "correctAnswerIndex": 2,
+        "title": "¿Cuál es uno de los propósitos principales de la Unidad de enlace denominada Oficial de Información?",
+        "answers": [
+          "Organizar eventos públicos para la transparencia.",
+          "Monitorear la actividad de redes sociales de las entidades del Estado.",
+          "Facilitar a toda persona el derecho de acceso a la información generada por las entidades del Estado."
+        ]
+      }
+    ]
+  }
 }

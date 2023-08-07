@@ -11,5 +11,20 @@
       "textType": "normal",
       "content": "El oficial de protección de datos personales no tendrá la consideración de responsable del tratamiento o custodio de la base de datos por prestar sus servicios en la entidad correspondiente."
     }
-  ]
+  ],
+  "quiz": {
+    "hasQuiz": true,
+    "questions": [
+      {
+        "id": 1,
+        "correctAnswerIndex": 2,
+        "title": "Según el Ejecutivo No. 285 de 28 de mayo de 2021, en su artículo 45, ¿cuál es el papel del oficial de protección de datos personales respecto a la base de datos?",
+        "answers": [
+          "Es responsable del tratamiento de la base de datos.",
+          "Es custodio de la base de datos.",
+          "No es considerado responsable del tratamiento o custodio de la base de datos por prestar sus servicios en la entidad correspondiente."
+        ]
+      }
+    ]
+  }
 }

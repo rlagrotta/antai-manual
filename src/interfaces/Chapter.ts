@@ -1,4 +1,5 @@
-import { Url } from "url";
+import { Url } from 'url';
+import { QuizData } from './Quiz';
 
 export interface TextContent {
   textType: 'bold' | 'normal';
@@ -14,7 +15,7 @@ export interface ListContent {
 }
 
 export interface Section {
-  contentType: 'text' | 'list' | 'link' | 'image' |'break';
+  contentType: 'text' | 'list' | 'link' | 'image' | 'break';
   textType?: 'bold' | 'normal' | 'mixed';
   content?: string | TextContent[] | ListContent[];
   url?: Url;
@@ -32,4 +33,5 @@ export interface Chapter {
   title: string;
   subtitle?: string; // Subtítulo opcional
   sections: Section[];
+  quiz?: QuizData;
 }

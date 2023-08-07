@@ -1,4 +1,4 @@
-import React, { createContext, useCallback, useState, useRef, ReactNode, useEffect } from 'react';
+import React, { createContext, useState, useRef, ReactNode, useEffect } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { useParams } from 'next/navigation';
 
@@ -26,7 +26,7 @@ export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
   const [progress, setProgress] = useState(0);
   const isFirstMount = useRef(true);
 
-  const prevPage = useCallback(() => {
+  const prevPage = () => {
     if (!params?.slug) return;
     const currentChapter = parseInt(params?.slug[0]);
     const chapter = manifest.chapters.find(c => c.id === currentChapter - 1);
@@ -36,17 +36,41 @@ export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
       return;
     }
     setProgress(0);
+    isFirstMount.current = true;
     push(`/page/${chapter.id}/${chapter.slug}`);
-  }, [params?.slug, push]);
+    setTimeout(() => {
+      isFirstMount.current = false;
+    }, 550);
+  };
 
-  const nextPage = useCallback(() => {
+  const checkNeedQuiz = () => {
+    if (!params?.slug) return;
+    const currentChapter = parseInt(params?.slug[0]);
+    const chapter = manifest.chapters.find(c => c.id === currentChapter);
+    if (!chapter) return;
+    if (chapter.hasQuiz) {
+      isFirstMount.current = true;
+      push(`/quiz/${chapter.id}/${chapter.slug}`);
+      setTimeout(() => {
+        isFirstMount.current = false;
+      }, 550);
+    } else {
+      nextPage();
+    }
+  };
+
+  const nextPage = () => {
     if (!params?.slug) return;
     const currentChapter = parseInt(params?.slug[0]);
     const chapter = manifest.chapters.find(c => c.id === currentChapter + 1);
     if (!chapter) return;
     setProgress(0);
+    isFirstMount.current = true;
     push(`/page/${chapter.id}/${chapter.slug}`);
-  }, [params?.slug, push]);
+    setTimeout(() => {
+      isFirstMount.current = false;
+    }, 550);
+  };
 
   useEffect(() => {
     isFirstMount.current = false;
@@ -67,7 +91,7 @@ export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
     };
   }, [scrollRef, currentRoute]);
 
-  const scrollUp = useCallback(() => {
+  const scrollUp = () => {
     if (scrollRef.current) {
       const nextScrollTop = Math.max(scrollRef.current.scrollTop - 80, 0);
 
@@ -80,9 +104,9 @@ export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
         });
       }
     }
-  }, [prevPage]);
+  };
 
-  const scrollDown = useCallback(() => {
+  const scrollDown = () => {
     if (scrollRef.current) {
       const nextScrollTop = Math.min(
         scrollRef.current.scrollTop + 80,
@@ -94,7 +118,7 @@ export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
         scrollRef.current.scrollTop + scrollRef.current.clientHeight >=
           scrollRef.current.scrollHeight - 20
       ) {
-        nextPage();
+        checkNeedQuiz();
       } else {
         scrollRef.current.scrollTo({
           top: nextScrollTop,
@@ -102,7 +126,7 @@ export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
         });
       }
     }
-  }, [nextPage]);
+  };
 
   return (
     <ScrollContext.Provider value={{ progress, scrollRef, scrollUp, scrollDown, nextPage }}>

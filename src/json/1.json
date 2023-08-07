@@ -24,5 +24,9 @@
       "textType": "normal",
       "content": "El Manual de Funciones y Procedimientos provee en detalle, el flujograma para la publicación de la información de la sección de transparencia, como atender una solicitud de información y el perfil adecuado y los principios éticos que debe tener para cumplir con su designación."
     }
-  ]
+  ],
+  "quiz": {
+    "hasQuiz": false,
+    "questions": []
+  }
 }

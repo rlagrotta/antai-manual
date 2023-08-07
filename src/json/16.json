@@ -60,5 +60,20 @@
       "textType": "normal",
       "content": "4. Creación de la Oficina de transparencia dentro de su institución; esta oficina se encargará de todos los temas relacionados a la ética, transparencia, acceso a la información, gobierno abierto, datos abiertos y protección de datos personales."
     }
-  ]
+  ],
+  "quiz": {
+    "hasQuiz": true,
+    "questions": [
+      {
+        "id": 1,
+        "correctAnswerIndex": 0,
+        "title": "¿Cuál es una de las recomendaciones para guiar a los ciudadanos en la correcta presentación de solicitudes de información?",
+        "answers": [
+          "Colocar una infografía en la recepción de cada entidad en un lugar visible.",
+          "Realizar encuestas de satisfacción a los ciudadanos.",
+          "Publicar las solicitudes de información en la página principal del sitio web."
+        ]
+      }
+    ]
+  }
 }

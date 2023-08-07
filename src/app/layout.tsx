@@ -6,6 +6,7 @@ import { Lexend_Exa } from 'next/font/google';
 
 import { Layout } from './../components/Layout';
 import { ScrollProvider } from './../contexts/ScrollContext';
+import QuizProvider from '@/contexts/QuizProvider';
 
 const LexendExa = Lexend_Exa({ subsets: ['latin'] });
 
@@ -51,9 +52,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={`${LexendExa.className}`}>
         <FocusHandler>
-          <ScrollProvider>
-            <Layout>{children}</Layout>
-          </ScrollProvider>
+          <QuizProvider>
+            <ScrollProvider>
+              <Layout>{children}</Layout>
+            </ScrollProvider>
+          </QuizProvider>
         </FocusHandler>
       </body>
     </html>

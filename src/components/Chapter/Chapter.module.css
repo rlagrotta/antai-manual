@@ -54,7 +54,9 @@
     height: 100%;
     object-fit: contain;
 }
-
+.linkContainer{
+  margin-block: 16px;
+}
 .link{
   text-decoration: underline;
 }

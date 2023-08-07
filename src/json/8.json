@@ -127,5 +127,20 @@
       "url": "https://www.antai.gob.pa/guia-del-usuario-final-de-la-plataforma-demonitoreo/",
       "content": "Guía del Usuario Final de la Plataforma de Monitoreo"
     }
-  ]
+  ],
+  "quiz": {
+    "hasQuiz": true,
+    "questions": [
+      {
+        "id": 1,
+        "correctAnswerIndex": 2,
+        "title": "Según el principio de publicidad, ¿qué están obligadas a hacer las instituciones del Estado en relación con la transparencia activa?",
+        "answers": [
+          "Publicar información solo en sus sitios web.",
+          "Mantener la información confidencial a menos que se solicite.",
+          "Tener disponible información actualizada en forma impresa y en sus sitios web sobre cómo están organizados."
+        ]
+      }
+    ]
+  }
 }

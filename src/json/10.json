@@ -36,5 +36,20 @@
         "Fomentar la investigación y el periodismo de datos, lo que permite recabar y analizar grandes cantidades de datos mediante software especializado para hacer comprensible la información a la comunidad a través de artículos, infografías, y visualizaciones de datos, entre otros."
       ]
     }
-  ]
+  ],
+  "quiz": {
+    "hasQuiz": true,
+    "questions": [
+      {
+        "id": 1,
+        "correctAnswerIndex": 1,
+        "title": "¿Qué permite la apertura de datos públicos según el contenido?",
+        "answers": [
+          "Limitar el acceso a la información a ciertos ciudadanos.",
+          "Permitir a la ciudadanía conocer la información pública de manera sencilla y accesible y contribuir activamente en la creación de políticas públicas.",
+          "Reducir la transparencia y rendición de cuentas en el gobierno."
+        ]
+      }
+    ]
+  }
 }

@@ -10,8 +10,11 @@ import styles from './footer.module.css';
 import manifest from './../../json/manifest.json';
 import BottomSheet from '../BottomSheet/BottomSheet';
 import { ScrollContext } from './../../contexts/ScrollContext';
+import QuizButtons, { ButtonProps } from '../QuizButtons/QuizButtons';
+import { QuizContext, QuizProviderState } from '@/contexts/QuizProvider';
 
 const Footer = () => {
+  const { currentStep, setCurrentStep } = useContext(QuizContext)!;
   const { push } = useRouter();
   const params = useParams();
   const scrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -21,6 +24,7 @@ const Footer = () => {
 
   const currentRoute = usePathname();
   const isHome = currentRoute === '/';
+  const isQuiz = /^\/quiz\/\d+(\/[^\/]+)?\/?$/.test(currentRoute);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -64,6 +68,34 @@ const Footer = () => {
     closeMenu();
   };
 
+  // funciones para botones de quiz
+  const nextQuestion = () => {
+    const steps = ['INTRO', 'QUESTION', 'RESULT'];
+    const nextStep = steps[steps.indexOf(currentStep) + 1] as QuizProviderState;
+    setCurrentStep(nextStep);
+  };
+  const RigthButtonTexts = {
+    INTRO: 'iniciar quiz',
+    QUESTION: 'Comprobar',
+    RESULT: 'Siguiente',
+  };
+  const LeftButtonTexts = {
+    INTRO: 'Saltar quiz',
+    QUESTION: 'Saltar',
+    RESULT: 'Repetir quiz',
+  };
+
+  // objetos de los botones de Quiz
+  const leftButton: ButtonProps = {
+    action: () => console.log('left button'),
+    text: LeftButtonTexts[currentStep],
+    state: 'outlined',
+  };
+  const RigthButton: ButtonProps = {
+    action: () => nextQuestion(),
+    text: RigthButtonTexts[currentStep],
+  };
+
   useEffect(() => {
     if (params?.slug && parseInt(params?.slug[0]) === manifest.chapters.length) {
       setIsLastChapter(true);
@@ -72,21 +104,29 @@ const Footer = () => {
     }
   }, [params?.slug]);
 
+  useEffect(() => {
+    stopScrolling();
+  }, [currentStep, isQuiz, params]);
+
   return (
     <>
-      <div className={`${styles.footer} ${isHome && styles.homeNavigationFooter}`}>
+      <div
+        className={`${styles.footer} ${isHome && styles.homeNavigationFooter} ${
+          isQuiz && styles.QuizNavigation
+        } `}
+      >
         <nav
           aria-label="Menú principal"
           className={`${styles.navigationMenu} ${menuOpen && styles.showTwoLeft} ${
             isLastChapter && styles.showTwoLeft
           } ${isHome && styles.homeNavigationMenu} ${isHome && menuOpen && styles.homeMenuOpen}`}
         >
-          {menuOpen && (
+          {!isQuiz && menuOpen && (
             <Button onClick={exit} red>
               SALIR
             </Button>
           )}
-          {!menuOpen && params?.slug && (
+          {!isQuiz && !menuOpen && params?.slug && (
             <Button
               icon="back"
               onMouseDown={() => startScrolling(scrollUp)}
@@ -97,24 +137,38 @@ const Footer = () => {
               onTouchCancel={stopScrolling}
             ></Button>
           )}
-          <Button icon={menuOpen ? 'close' : 'menu'} onClick={toggleMenu}>
-            Menú
-          </Button>
-          {!menuOpen && !params?.slug && (
+          {!isQuiz && (
+            <Button icon={menuOpen ? 'close' : 'menu'} onClick={toggleMenu}>
+              Menú
+            </Button>
+          )}
+          {!isQuiz && !menuOpen && !params?.slug && (
             <Button icon="next" onClick={start}>
               Iniciar
             </Button>
           )}
-          {!menuOpen && params?.slug && parseInt(params?.slug[0]) < manifest.chapters.length && (
-            <Button
-              icon="next"
-              onMouseDown={() => startScrolling(scrollDown)}
-              onMouseUp={stopScrolling}
-              onMouseLeave={stopScrolling}
-              onTouchStart={() => startScrolling(scrollDown)}
-              onTouchEnd={stopScrolling}
-              onTouchCancel={stopScrolling}
-            ></Button>
+          {!isQuiz &&
+            !menuOpen &&
+            params?.slug &&
+            parseInt(params?.slug[0]) < manifest.chapters.length && (
+              <Button
+                icon="next"
+                onMouseDown={() => startScrolling(scrollDown)}
+                onMouseUp={stopScrolling}
+                onMouseLeave={stopScrolling}
+                onTouchStart={() => startScrolling(scrollDown)}
+                onTouchEnd={stopScrolling}
+                onTouchCancel={stopScrolling}
+              ></Button>
+            )}
+          {/* botones del quiz */}
+          {isQuiz && (
+            <QuizButtons
+              currentStep={currentStep}
+              setCurrentStep={setCurrentStep}
+              leftButton={leftButton}
+              rightButton={RigthButton}
+            />
           )}
         </nav>
       </div>

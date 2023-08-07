@@ -1,6 +1,7 @@
 .mainContainer {
-  display: grid;
-  place-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .container {
   padding: 0 16px 0 16px;
@@ -15,6 +16,12 @@
   height: calc(calc(var(--vh, 1vh) * 100) - 68px);
 }
 
+.isQuiz.content {
+  display: grid;
+  max-width: 800px;
+  height: calc(calc(var(--vh, 1vh) * 100) - 68px);
+}
+
 @media screen and (min-width: 768px) {
   .container {
     padding: 0 100px 0px 100px;
@@ -23,5 +30,6 @@
     max-width: 1000px;
     display: grid;
     height: calc(calc(var(--vh, 1vh) * 100) - 68px - var(--progressBarHeight));
+    margin: 0 auto;
   }
 }

@@ -26,5 +26,20 @@
       "url": "https://www.antai.gob.pa/wp-content/uploads/2021/07/Version-Final-Guia-de-Datos-Abiertos-2.pdf",
       "content": "Procedimiento establecido en la Guía de Apertura de Datos abiertos"
     }
-  ]
+  ],
+  "quiz": {
+    "hasQuiz": true,
+    "questions": [
+      {
+        "id": 1,
+        "correctAnswerIndex": 1,
+        "title": "¿Con cuál entidad se coordina el oficial de información como enlace institucional para la actualización del portal nacional de datos abiertos de Panamá?",
+        "answers": [
+          "Ministerio de Tecnología de Panamá",
+          "Autoridad Nacional de Innovación Gubernamental",
+          "Consejo Nacional de Transparencia Pública"
+        ]
+      }
+    ]
+  }
 }

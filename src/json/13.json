@@ -11,5 +11,20 @@
         "La autoridad de control llevará un registro de los oficiales de protección de\ndatos y podrá organizar capacitaciones dirigidas a fortalecer sus funciones."
       ]
     }
-  ]
+  ],
+  "quiz": {
+    "hasQuiz": true,
+    "questions": [
+      {
+        "id": 1,
+        "correctAnswerIndex": 0,
+        "title": "¿Qué se requiere para ser oficial de protección de datos según el Decreto Ejecutivo No. 285?",
+        "answers": [
+          "Experiencia profesional previa en la materia y conocimiento del sector de actividad de la entidad.",
+          "Ser notificado formalmente por la autoridad de control.",
+          "Estar registrado en la autoridad de control."
+        ]
+      }
+    ]
+  }
 }

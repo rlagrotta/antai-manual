@@ -1,0 +1,51 @@
+.mainContainer{
+  display: flex;
+  align-items: center;
+  gap:16px;
+}
+.quizIlustration{
+  width: 430px;
+  height: 267px;
+  background-image: url('../../../public/assets/chapters_ilustrations/Portada_de_Quiz.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.textContainer{
+  padding-inline: 16px;
+}
+.title{
+color: #D6DDF5;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 125%; /* 30px */
+letter-spacing: -0.12px;
+text-transform: uppercase;
+margin-bottom: 24px;
+}
+.listContainer{
+  margin-inline: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.listElement{
+color: #D6DDF5;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 100%; /* 16px */
+letter-spacing: -0.08px;
+}
+@media screen and (max-width: 768px) {
+  .mainContainer{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .quizIlustration{
+    width: 300px;
+    height: 300px;
+  }
+
+}

@@ -1,4 +1,5 @@
-import React, { use, useState, useEffect } from 'react';
+'use client';
+import React, { useState, useEffect } from 'react';
 import styles from './QuestionText.module.css';
 
 interface QuestionTextProps {
@@ -23,7 +24,7 @@ export default function QuestionText({
   return (
     <div className={styles.mainContainer}>
       <h2 className={styles.title}>{pregunta}</h2>
-      <p className={`${styles.text} ${showHint && styles.textShow}`}>{`Pista: ${pista}`}</p>
+      {/* <p className={`${styles.text} ${showHint && styles.textShow}`}>{`Pista: ${pista}`}</p> */}
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './QuestionCard.module.css';
 
-interface QuestionCardProps {
+export interface QuestionCardProps {
   state?: 'success' | 'error' | 'selected' | 'default';
-  letter: 'A' | 'B' | 'C' | 'D' | 'E' | 'F';
+  letter: string;
   mainText: string;
   secondaryText: string;
 }
@@ -37,7 +37,9 @@ export default function QuestionCard({
         } `}
       >
         <div className={styles.text1}>{mainText}</div>
-        <div className={styles.text2}>{secondaryText}</div>
+        <div className={`${styles.text2} ${isSelected && styles.text2Selected}`}>
+          {secondaryText}
+        </div>
       </div>
     </div>
   );
