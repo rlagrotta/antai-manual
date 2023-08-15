@@ -95,10 +95,18 @@ export default function QuizButtons({
 
   return (
     <div className={styles.buttonsContainer}>
-      <Button onClick={leftButtonAction} {...buttonStates(leftButton.state)}>
+      <Button
+        onClick={leftButtonAction}
+        ariaLabel={leftButton.text}
+        {...buttonStates(leftButton.state)}
+      >
         <span className={styles.butonText}>{leftButton.text}</span>
       </Button>
-      <Button onClick={rightButtonAction} {...buttonStates(rightButton.state)}>
+      <Button
+        onClick={rightButtonAction}
+        ariaLabel={rightButton.text}
+        {...buttonStates(rightButton.state)}
+      >
         <span className={styles.butonText}>{rightButton.text}</span>
       </Button>
     </div>

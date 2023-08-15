@@ -18,25 +18,37 @@ export default function QuizQuestionComponent({ questionData }: QuizQuestionProp
   return (
     <div className={styles.mainContainer}>
       <QuestionText pregunta={questionData.title} pista="" />
-      {questionData.answers?.map((respuesta, index) => {
-        return (
-          // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
-          <div
-            key={index}
-            onClick={() => {
-              setSelected(index);
-              if (setAnswerIndex) setAnswerIndex(index);
-            }}
-          >
-            <QuestionCard
-              letter={letters[index]}
-              mainText={respuesta}
-              secondaryText=""
-              state={selected === index ? 'selected' : 'default'}
-            />
-          </div>
-        );
-      })}
+      <div role="radiogroup" className={styles.radioGroup}>
+        {questionData.answers?.map((respuesta, index) => {
+          return (
+            // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
+            <div
+              key={index}
+              onClick={() => {
+                setSelected(index);
+                if (setAnswerIndex) setAnswerIndex(index);
+              }}
+              onKeyDown={e => {
+                if (e.key === 'Enter') {
+                  setSelected(index);
+                  if (setAnswerIndex) setAnswerIndex(index);
+                }
+              }}
+              role="radio"
+              aria-checked={selected === index}
+              tabIndex={0}
+              aria-label={respuesta}
+            >
+              <QuestionCard
+                letter={letters[index]}
+                mainText={respuesta}
+                secondaryText=""
+                state={selected === index ? 'selected' : 'default'}
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

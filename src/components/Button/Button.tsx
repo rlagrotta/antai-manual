@@ -16,13 +16,30 @@ interface props {
   onTouchEnd?: () => void;
   onTouchCancel?: () => void;
   onKeyDown?: () => void;
+  onBlur?: () => void;
   red?: boolean;
   outlined?: boolean;
   disabled?: boolean;
-
+  ariaLabel?: string;
 }
 
-const Button = ({ children, icon, onClick, onMouseDown, onMouseLeave, onMouseUp, onTouchStart, onTouchEnd, onTouchCancel, onKeyDown, red, outlined, disabled }: props) => {
+const Button = ({
+  children,
+  icon,
+  onClick,
+  onMouseDown,
+  onMouseLeave,
+  onMouseUp,
+  onTouchStart,
+  onTouchEnd,
+  onTouchCancel,
+  onKeyDown,
+  red,
+  outlined,
+  disabled,
+  ariaLabel,
+  onBlur,
+}: props) => {
   const handleClick = () => {
     if (onClick) {
       onClick();
@@ -42,7 +59,8 @@ const Button = ({ children, icon, onClick, onMouseDown, onMouseLeave, onMouseUp,
       onTouchEnd={onTouchEnd}
       onTouchCancel={onTouchCancel}
       onKeyDown={onKeyDown}
-      
+      onBlur={onBlur}
+      aria-label={ariaLabel}
     >
       {children}
       {icon && <div className={`${styles.icon} ${styles[`icon_${icon}`]}`}></div>}

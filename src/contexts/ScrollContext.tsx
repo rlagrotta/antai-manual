@@ -78,6 +78,7 @@ export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
 
   useEffect(() => {
     const scrollElement = scrollRef.current;
+    scrollRef.current?.focus();
     const calculateScrollDistance = () => {
       const scrollTop = scrollElement?.scrollTop ?? 0;
       const scrollHeight = scrollElement?.scrollHeight ?? 0;

@@ -1,16 +1,17 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 
 import styles from './layout.module.css';
 import Footer from '../Footer';
 import ProgressBar from '../progressBar/ProgressBar';
-interface props {
+interface Props {
   children: React.ReactNode;
 }
 
-const Layout = ({ children }: props) => {
+const Layout = ({ children }: Props) => {
   const currentRoute = usePathname();
+  const containerRef = useRef<HTMLDivElement>(null);
   const isHome = currentRoute === '/';
   const isQuiz = /^\/quiz\/\d+(\/[^\/]+)?\/?$/.test(currentRoute);
   console.log(isQuiz, 'isQuiz');
@@ -24,11 +25,20 @@ const Layout = ({ children }: props) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  useEffect(() => {
+    if (containerRef.current) {
+      containerRef.current.focus();
+    }
+  }, [currentRoute]);
+
   return (
-    <div className={styles.mainContainer}>
+    <div className={styles.mainContainer} aria-live="polite" aria-atomic="true">
       <ProgressBar />
       <div className={styles.container}>
-        <div className={`${styles.content} ${isHome && styles.isHome} ${isQuiz && styles.isQuiz} `}>
+        <div
+          ref={containerRef}
+          className={`${styles.content} ${isHome && styles.isHome} ${isQuiz && styles.isQuiz} `}
+        >
           {children}
         </div>
         <Footer />

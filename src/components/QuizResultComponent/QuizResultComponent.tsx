@@ -20,7 +20,7 @@ export default function QuizResultComponent({ state }: QuizResultComponentProps)
         } ${styles.ilustration}`}
       ></div>
       <QuizResultBadge state={state} />
-      {state && <span className={styles.text}>{texts[state]}</span>}
+      {state && <h2 className={styles.text}>{texts[state]}</h2>}
     </div>
   );
 }

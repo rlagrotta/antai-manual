@@ -8,7 +8,7 @@ export default function QuizIntroComponent() {
     <div className={styles.mainContainer}>
       <div className={styles.quizIlustration}></div>
       <div className={styles.textContainer}>
-        <div className={`${styles.title} ${LexendExa.className}`}>¡Es momento del Quiz!</div>
+        <h1 className={`${styles.title} ${LexendExa.className}`}>¡Es momento del Quiz!</h1>
         <ul className={styles.listContainer}>
           <li className={styles.listElement}>
             ¡Es opcional y puedes hacerlo cuantas veces desees!

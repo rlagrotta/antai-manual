@@ -110,13 +110,14 @@ const Footer = () => {
 
   return (
     <>
-      <div
+      <footer
         className={`${styles.footer} ${isHome && styles.homeNavigationFooter} ${
           isQuiz && styles.QuizNavigation
         } `}
       >
         <nav
           aria-label="Menú principal"
+          role="navigation"
           className={`${styles.navigationMenu} ${menuOpen && styles.showTwoLeft} ${
             isLastChapter && styles.showTwoLeft
           } ${isHome && styles.homeNavigationMenu} ${isHome && menuOpen && styles.homeMenuOpen}`}
@@ -135,15 +136,18 @@ const Footer = () => {
               onTouchStart={() => startScrolling(scrollUp)}
               onTouchEnd={stopScrolling}
               onTouchCancel={stopScrolling}
+              onBlur={stopScrolling}
+              onClick={() => startScrolling(scrollUp)}
+              ariaLabel="Regresar"
             ></Button>
           )}
           {!isQuiz && (
-            <Button icon={menuOpen ? 'close' : 'menu'} onClick={toggleMenu}>
+            <Button icon={menuOpen ? 'close' : 'menu'} ariaLabel="Menú" onClick={toggleMenu}>
               Menú
             </Button>
           )}
           {!isQuiz && !menuOpen && !params?.slug && (
-            <Button icon="next" onClick={start}>
+            <Button icon="next" ariaLabel="Iniciar" onClick={start}>
               Iniciar
             </Button>
           )}
@@ -159,6 +163,9 @@ const Footer = () => {
                 onTouchStart={() => startScrolling(scrollDown)}
                 onTouchEnd={stopScrolling}
                 onTouchCancel={stopScrolling}
+                onBlur={stopScrolling}
+                onClick={() => startScrolling(scrollDown)}
+                ariaLabel="Siguiente"
               ></Button>
             )}
           {/* botones del quiz */}
@@ -171,7 +178,7 @@ const Footer = () => {
             />
           )}
         </nav>
-      </div>
+      </footer>
       <BottomSheet isOpen={menuOpen} onClose={closeMenu}>
         <ul className={styles.menuList}>
           {manifest.chapters.map((chapter, i) => (

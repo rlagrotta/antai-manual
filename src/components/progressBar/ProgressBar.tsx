@@ -69,7 +69,8 @@ export default function ProgressBar() {
   if (isHome) return null;
   if (isQuiz) return null;
   return (
-    <div
+    <section
+      aria-label="Barra de progreso"
       className={`${styles.mainContainer} ${LexendGiga.className} ${
         isQuiz && styles.mainContainerQuiz
       }`}
@@ -91,6 +92,6 @@ export default function ProgressBar() {
           </>
         )}
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,5 +1,5 @@
 'use client';
-import React, { useRef, useState, useContext } from 'react';
+import React, { useRef, useEffect, useContext } from 'react';
 
 import styles from './Chapter.module.css';
 import { ScrollContext } from './../../contexts/ScrollContext';
@@ -57,7 +57,11 @@ const SectionComponent: React.FC<Section> = ({
     case 'list':
       return <ListComponent items={content as (string | TextContent)[]} />;
     case 'image':
-      return <img className={styles.image} src={src as string} alt={alt as string} />;
+      return (
+        <figure>
+          <img className={styles.image} src={src as string} alt={alt as string} />
+        </figure>
+      );
     case 'link':
       return (
         <div className={styles.linkContainer}>
@@ -95,8 +99,9 @@ const ilustrationsDictionary: IlustrationsDictionary = {
 export const ChapterComponent: React.FC<Chapter> = ({ title, subtitle, sections }) => {
   const { scrollRef } = useContext(ScrollContext)!;
   const showIlustration = title in ilustrationsDictionary;
+
   return (
-    <div className={styles.container} ref={scrollRef}>
+    <article role="main" aria-live="polite" className={styles.container} ref={scrollRef}>
       {showIlustration && (
         <Image height={150} src={ilustrationsDictionary[title]} alt={title + 'ilustracion'} />
       )}
@@ -106,6 +111,6 @@ export const ChapterComponent: React.FC<Chapter> = ({ title, subtitle, sections 
           <SectionComponent key={index} {...section} />
         ))}
       </div>
-    </div>
+    </article>
   );
 };

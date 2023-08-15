@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, MutableRefObject } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './BottomSheet.module.css';
 
 interface BottomSheetProps {
@@ -8,6 +8,8 @@ interface BottomSheetProps {
 }
 
 const BottomSheet: React.FC<BottomSheetProps> = ({ isOpen, onClose, children }) => {
+  const [shouldRender, setShouldRender] = useState(false);
+  const [animateOpen, setAnimateOpen] = useState(false);
   const sheetRef = useRef<HTMLDivElement | null>(null);
 
   const handleClose = () => {
@@ -21,6 +23,18 @@ const BottomSheet: React.FC<BottomSheetProps> = ({ isOpen, onClose, children }) 
   };
 
   useEffect(() => {
+    if (isOpen) {
+      setShouldRender(true);
+      setTimeout(() => {
+        setAnimateOpen(true);
+      }, 10);
+    } else {
+      setAnimateOpen(false);
+      setTimeout(() => setShouldRender(false), 300); // Esperar a que termine la animación
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
     if (isOpen && sheetRef.current) {
       sheetRef.current.focus();
     } else if (sheetRef.current) {
@@ -28,22 +42,24 @@ const BottomSheet: React.FC<BottomSheetProps> = ({ isOpen, onClose, children }) 
     }
   }, [isOpen]);
 
+  if (!shouldRender) return null;
+
   return (
     <>
       <div
-        className={`${styles.overlay} ${!isOpen && styles.hidden}`}
+        className={`${styles.overlay} ${!animateOpen && styles.hidden}`}
         onClick={handleClose}
         onKeyDown={handleKeyDown}
         aria-hidden={true}
       ></div>
       {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
       <div
-        className={`${styles.bottomSheet} ${!isOpen && styles.hidden}`}
+        className={`${styles.bottomSheet} ${!animateOpen && styles.hidden}`}
         onClick={(e: React.MouseEvent) => e.stopPropagation()}
         onKeyDown={handleKeyDown}
         role="dialog"
+        aria-label="Menú de capítulos"
         aria-modal="true"
-        tabIndex={-1}
         ref={sheetRef}
       >
         {children}

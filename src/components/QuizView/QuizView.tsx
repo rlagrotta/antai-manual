@@ -26,5 +26,5 @@ export default function QuizView({ quizData }: QuizViewProps) {
     RESULT: <QuizResultComponent state={quizResultState} />,
   };
 
-  return <div>{steps[currentStep]}</div>;
+  return steps[currentStep];
 }

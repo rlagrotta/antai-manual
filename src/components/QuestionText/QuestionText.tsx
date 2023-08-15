@@ -22,9 +22,8 @@ export default function QuestionText({
   }, [pregunta, timeShowPista]);
 
   return (
-    <div className={styles.mainContainer}>
-      <h2 className={styles.title}>{pregunta}</h2>
-      {/* <p className={`${styles.text} ${showHint && styles.textShow}`}>{`Pista: ${pista}`}</p> */}
-    </div>
+    <h2 className={styles.title} aria-label={`Pregunta: ${pregunta}`}>
+      {pregunta}
+    </h2>
   );
 }

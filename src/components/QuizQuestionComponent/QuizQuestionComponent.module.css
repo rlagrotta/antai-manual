@@ -1,5 +1,11 @@
-.mainContainer{
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }

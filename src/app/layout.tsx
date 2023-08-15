@@ -15,23 +15,21 @@ interface Props {
 }
 
 // Este componente manejará el enfoque en las transiciones de ruta.
-const FocusHandler = ({ children }: Props) => {
-  const containerRef = useRef<HTMLElement>(null);
+// const FocusHandler = ({ children }: Props) => {
+//   const containerRef = useRef<HTMLElement>(null);
 
-  // En cada cambio de ruta, coloca el foco en el contenedor principal.
-  useEffect(() => {
-    if (containerRef.current) {
-      containerRef.current.focus();
-    }
-  });
+//   // En cada cambio de ruta, coloca el foco en el contenedor principal.
+//   useEffect(() => {
+//     if (containerRef.current) {
+//       containerRef.current.focus();
+//     }
+//   });
 
-  return (
-    // El atributo tabIndex es necesario para hacer que un elemento no enfocable sea enfocable.
-    <main tabIndex={-1} ref={containerRef}>
-      {children}
-    </main>
-  );
-};
+//   return (
+//     // El atributo tabIndex es necesario para hacer que un elemento no enfocable sea enfocable.
+//     <main ref={containerRef}>{children}</main>
+//   );
+// };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -45,19 +43,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Manual de Procedimientos y Lineamientos del Oficial de Información - AUTORIDAD NACIONAL DE
           TRANSPARENCIA Y ACCESO A LA INFORMACION
         </title>
-        <meta
-          name="description"
-          content="Manual de funciones del Oficial de Información, creado para garantizar el derecho de acceso a la información pública conforme a leyes y tratados. Este manual provee el flujograma para la publicación de información, la atención de solicitudes y el perfil ético requerido para su correcto desempeño."
-        />
       </head>
       <body className={`${LexendExa.className}`}>
-        <FocusHandler>
-          <QuizProvider>
-            <ScrollProvider>
-              <Layout>{children}</Layout>
-            </ScrollProvider>
-          </QuizProvider>
-        </FocusHandler>
+        <QuizProvider>
+          <ScrollProvider>
+            <Layout>{children}</Layout>
+          </ScrollProvider>
+        </QuizProvider>
       </body>
     </html>
   );
