@@ -1,6 +1,7 @@
 .logoContainer {
   margin-bottom: 32px;
 }
+
 .titleContainer h1 {
   color: #d6ddf5;
   font-size: 18px;
@@ -9,14 +10,18 @@
   line-height: 125%; /* 22.5px */
   letter-spacing: -0.09px;
   text-transform: uppercase;
+  text-align: left;
+  margin-top: 32px;
 }
 @media screen and (min-width: 768px) {
-  .mainContainer{
+  .mainContainer {
     align-self: center;
     padding-inline: 96px;
   }
   .titleContainer h1 {
     font-size: 38px;
     letter-spacing: -0.19px;
+    text-align: center;
+    margin-top: 0;
   }
 }

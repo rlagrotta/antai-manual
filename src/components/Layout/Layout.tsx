@@ -5,6 +5,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import styles from './layout.module.css';
 import Footer from '../Footer';
 import ProgressBar from '../progressBar/ProgressBar';
+import Header from '../Header/Header';
 interface Props {
   children: React.ReactNode;
 }
@@ -14,7 +15,6 @@ const Layout = ({ children }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const isHome = currentRoute === '/';
   const isQuiz = /^\/quiz\/\d+(\/[^\/]+)?\/?$/.test(currentRoute);
-  console.log(isQuiz, 'isQuiz');
   useEffect(() => {
     const handleResize = () => {
       let vh = window.innerHeight * 0.01;
@@ -33,6 +33,7 @@ const Layout = ({ children }: Props) => {
 
   return (
     <div className={styles.mainContainer} aria-live="polite" aria-atomic="true">
+      <Header />
       <ProgressBar />
       <div className={styles.container}>
         <div

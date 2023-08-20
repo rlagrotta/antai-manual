@@ -14,7 +14,6 @@ interface QuizQuestionProps {
 export default function QuizQuestionComponent({ questionData }: QuizQuestionProps) {
   const [selected, setSelected] = useState<number | null>(null);
   const { setAnswerIndex } = useContext(QuizContext)!;
-  console.log(questionData, 'questionData');
   return (
     <div className={styles.mainContainer}>
       <QuestionText pregunta={questionData.title} pista="" />

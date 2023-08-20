@@ -48,17 +48,26 @@
   width: 100%;
 }
 
+.credits {
+  font-size: 12px;
+  letter-spacing: -0.5px;
+  padding: 0px 0px 16px;
+  text-align: center;
+}
+
 @media screen and (min-width: 768px) {
-  .footer{
+  .footer {
     max-width: 1000px;
     margin: 0 auto;
   }
-  .QuizNavigation{
-    max-width: 800px
+  .QuizNavigation {
+    max-width: 800px;
   }
   .homeNavigationFooter {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
   .homeNavigationMenu {
     width: 629px;

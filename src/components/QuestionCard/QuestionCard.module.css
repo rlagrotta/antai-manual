@@ -63,7 +63,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 8px;
 }
 .textContainerSuccess {
   background-color: rgba(71, 184, 129, 0.1);
@@ -75,7 +74,7 @@
 
 .text1 {
   transition: color 0.3s ease-in-out;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   color: #fff;
 }
@@ -88,4 +87,13 @@
 }
 .text2Selected {
   color: #fff;
+}
+
+@media screen and (max-width: 375px) {
+  .textContainer {
+    padding: 8px;
+  }
+  .text1 {
+    font-size: 13px;
+  }
 }

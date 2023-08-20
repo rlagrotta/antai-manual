@@ -15,6 +15,8 @@ import { QuizContext, QuizProviderState } from '@/contexts/QuizProvider';
 
 const Footer = () => {
   const { currentStep, setCurrentStep } = useContext(QuizContext)!;
+  const footerRef = useRef<HTMLDivElement | null>(null);
+  const creditsRef = useRef<HTMLDivElement | null>(null);
   const { push } = useRouter();
   const params = useParams();
   const scrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -75,19 +77,19 @@ const Footer = () => {
     setCurrentStep(nextStep);
   };
   const RigthButtonTexts = {
-    INTRO: 'iniciar quiz',
+    INTRO: 'Iniciar',
     QUESTION: 'Comprobar',
     RESULT: 'Siguiente',
   };
   const LeftButtonTexts = {
-    INTRO: 'Saltar quiz',
+    INTRO: 'Saltar',
     QUESTION: 'Saltar',
-    RESULT: 'Repetir quiz',
+    RESULT: 'Repetir',
   };
 
   // objetos de los botones de Quiz
   const leftButton: ButtonProps = {
-    action: () => console.log('left button'),
+    action: () => {},
     text: LeftButtonTexts[currentStep],
     state: 'outlined',
   };
@@ -108,12 +110,26 @@ const Footer = () => {
     stopScrolling();
   }, [currentStep, isQuiz, params]);
 
+  useEffect(() => {
+    const creditsDiv = creditsRef.current;
+    const footerDiv = footerRef.current;
+    if (footerDiv) {
+      const height = footerDiv.offsetHeight;
+      document.documentElement.style.setProperty('--footerHeight', `${height}px`);
+    }
+    if (creditsDiv) {
+      const height = creditsDiv.offsetHeight;
+      document.documentElement.style.setProperty('--creditsHeight', `${height}px`);
+    }
+  }, [currentRoute, menuOpen]);
+
   return (
     <>
       <footer
         className={`${styles.footer} ${isHome && styles.homeNavigationFooter} ${
           isQuiz && styles.QuizNavigation
         } `}
+        ref={footerRef}
       >
         <nav
           aria-label="Menú principal"
@@ -124,7 +140,7 @@ const Footer = () => {
         >
           {!isQuiz && menuOpen && (
             <Button onClick={exit} red>
-              SALIR
+              Salir
             </Button>
           )}
           {!isQuiz && !menuOpen && params?.slug && (
@@ -178,6 +194,10 @@ const Footer = () => {
             />
           )}
         </nav>
+
+        <p className={styles.credits} ref={creditsRef}>
+          Con el apoyo del Instituto Republicano Internacional y la Embajada de los Estados Unidos.
+        </p>
       </footer>
       <BottomSheet isOpen={menuOpen} onClose={closeMenu}>
         <ul className={styles.menuList}>

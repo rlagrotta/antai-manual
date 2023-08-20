@@ -9,3 +9,12 @@
   flex-direction: column;
   gap: 24px;
 }
+
+@media screen and (max-width: 768px) {
+  .mainContainer {
+    gap: 16px;
+  }
+  .radioGroup {
+    gap: 12px;
+  }
+}

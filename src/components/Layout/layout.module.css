@@ -8,18 +8,18 @@
 }
 
 .content {
-  height: calc(calc(var(--vh, 1vh) * 100) - 68px - var(--progressBarHeight));
+  height: calc(calc(var(--vh, 1vh) * 100) - var(--progressBarHeight) - 80px - var(--footerHeight));
 }
 
 .isHome.content {
   padding-top: 16px;
-  height: calc(calc(var(--vh, 1vh) * 100) - 68px);
+  height: calc(calc(var(--vh, 1vh) * 100) - 80px - var(--footerHeight));
 }
 
 .isQuiz.content {
   display: grid;
   max-width: 800px;
-  height: calc(calc(var(--vh, 1vh) * 100) - 68px);
+  height: calc(calc(var(--vh, 1vh) * 100) - 80px - var(--footerHeight));
 }
 
 @media screen and (min-width: 768px) {
@@ -29,7 +29,9 @@
   .content {
     max-width: 1000px;
     display: grid;
-    height: calc(calc(var(--vh, 1vh) * 100) - 68px - var(--progressBarHeight));
+    height: calc(
+      calc(var(--vh, 1vh) * 100) - var(--progressBarHeight) - 80px - var(--footerHeight)
+    );
     margin: 0 auto;
   }
 }

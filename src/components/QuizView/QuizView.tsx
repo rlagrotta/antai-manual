@@ -15,7 +15,6 @@ export default function QuizView({ quizData }: QuizViewProps) {
   const { currentStep, setQuizData, quizResultState } = useContext<QuizContextProvider | null>(
     QuizContext
   )!;
-  console.log(quizData, 'quizData');
   setQuizData && setQuizData(quizData);
   const steps = {
     INTRO: <QuizIntroComponent />,

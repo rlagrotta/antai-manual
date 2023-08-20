@@ -43,6 +43,14 @@ const SectionComponent: React.FC<Section> = ({
   alt,
   heigth,
 }) => {
+  const handleDownload = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    event.preventDefault();
+    const a = document.createElement('a');
+    a.href = src as string;
+    a.download = alt || 'image'; // Si no tienes un nombre alternativo, simplemente descargará como "image"
+    a.click();
+  };
+
   switch (contentType) {
     case 'text':
       return textType === 'mixed' ? (
@@ -59,7 +67,16 @@ const SectionComponent: React.FC<Section> = ({
     case 'image':
       return (
         <figure>
-          <img className={styles.image} src={src as string} alt={alt as string} />
+          <div className={styles.imageContainer}>
+            <div
+              role="button"
+              aria-label="Descargar Imagen"
+              className={styles.downloadIcon}
+              onClick={handleDownload}
+              aria-hidden="true"
+            ></div>
+            <img className={styles.image} src={src as string} alt={alt as string} />
+          </div>
         </figure>
       );
     case 'link':
@@ -103,7 +120,12 @@ export const ChapterComponent: React.FC<Chapter> = ({ title, subtitle, sections 
   return (
     <article role="main" aria-live="polite" className={styles.container} ref={scrollRef}>
       {showIlustration && (
-        <Image height={150} src={ilustrationsDictionary[title]} alt={title + 'ilustracion'} />
+        <Image
+          height={150}
+          className={styles.illustration}
+          src={ilustrationsDictionary[title]}
+          alt={title + 'ilustracion'}
+        />
       )}
       <h1 className={styles.title}>{title}</h1>
       <div className={styles.sections}>
