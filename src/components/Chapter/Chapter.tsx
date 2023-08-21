@@ -68,14 +68,11 @@ const SectionComponent: React.FC<Section> = ({
       return (
         <figure>
           <div className={styles.imageContainer}>
-            <div
-              role="button"
-              aria-label="Descargar Imagen"
-              className={styles.downloadIcon}
-              onClick={handleDownload}
-              aria-hidden="true"
-            ></div>
             <img className={styles.image} src={src as string} alt={alt as string} />
+            <div className={styles.downloadContainer} onClick={handleDownload} aria-hidden="true">
+              <div className={styles.downloadIcon}></div>
+              <span className={styles.downloadText}>Descargar</span>
+            </div>
           </div>
         </figure>
       );
