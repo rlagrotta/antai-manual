@@ -7,8 +7,7 @@ export default function Home() {
     <div className={styles.mainContainer}>
       <div className={styles.titleContainer}>
         <h1>
-          Manual de funciones y procedimientos de la unidad de enlace denominada Oficial de
-          Información
+        MANUAL DE FUNCIONES Y PROCEDIMIENTOS DEL OFICIAL DE INFORMACIÓN
         </h1>
       </div>
     </div>

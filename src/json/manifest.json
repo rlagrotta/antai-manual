@@ -15,85 +15,85 @@
     {
       "id": 3,
       "slug": "el-oficial-de-informacion",
-      "title": "El Oficial de Información",
+      "title": "1.El Oficial de Información",
       "hasQuiz": true
     },
     {
       "id": 4,
       "slug": "obligaciones-del-oficial-de-informacion",
-      "title": "Obligaciones del Oficial de Información",
+      "title": "2.Obligaciones del Oficial de Información",
       "hasQuiz": true
     },
     {
       "id": 5,
       "slug": "descripcion-del-trabajo",
-      "title": "Descripción del Trabajo",
+      "title": "3.Descripción del Trabajo",
       "hasQuiz": true
     },
     {
       "id": 6,
       "slug": "colaboracion-de-las-jefaturas-y-direcciones-de-una-institucion-para-la-gestion-de-la-informacion",
-      "title": "Colaboración de las Jefaturas y Direcciones de una Institución, para la Gestión de la Información",
+      "title": "4.Colaboración de las Jefaturas y Direcciones de una Institución, para la Gestión de la Información",
       "hasQuiz": true
     },
     {
       "id": 7,
       "slug": "transparencia-pasiva",
-      "title": "Transparencia Pasiva",
+      "title": "5.Transparencia Pasiva",
       "hasQuiz": true
     },
     {
       "id": 8,
       "slug": "transparencia-activa",
-      "title": "Transparencia Activa",
+      "title": "6.Transparencia Activa",
       "hasQuiz": true
     },
     {
       "id": 9,
       "slug": "flujograma-de-monitoreo",
-      "title": "Flujograma de Monitoreo",
+      "title": "7.Flujograma de Monitoreo",
       "hasQuiz": false
     },
     {
       "id": 10,
       "slug": "datos-abiertos-de-gobierno",
-      "title": "Datos Abiertos de Gobierno",
+      "title": "8.Datos Abiertos de Gobierno",
       "hasQuiz": true
     },
     {
       "id": 11,
       "slug": "funciones-del-oficial-de-informacion-en-la-apertura-de-datos",
-      "title": "Funciones del Oficial de Información en la Apertura de Datos",
+      "title": "9.Funciones del Oficial de Información en la Apertura de Datos",
       "hasQuiz": true
     },
     {
       "id": 12,
       "slug": "proteccion-de-datos-personales",
-      "title": "Protección de Datos Personales",
+      "title": "10.Protección de Datos Personales",
       "hasQuiz": true
     },
     {
       "id": 13,
       "slug": "perfil-del-oficial-de-proteccion-de-datos",
-      "title": "Perfil del Oficial de Protección de Datos",
+      "title": "11.Perfil del Oficial de Protección de Datos",
       "hasQuiz": true
     },
     {
       "id": 14,
       "slug": "funciones-del-oficial-de-proteccion-de-datos",
-      "title": "Funciones del Oficial de Protección de Datos",
+      "title": "12.Funciones del Oficial de Protección de Datos",
       "hasQuiz": true
     },
     {
       "id": 15,
       "slug": "limite-de-la-responsabilidad-del-oficial-de-proteccion-de-datos-personales",
-      "title": "Límite de la Responsabilidad del Oficial de Protección de Datos Personales",
+      "title": "13.Límite de la Responsabilidad del Oficial de Protección de Datos Personales",
       "hasQuiz": true
     },
     {
       "id": 16,
       "slug": "buenas-practicas",
-      "title": "Buenas Prácticas",
+      "title": "14.Buenas Prácticas",
       "hasQuiz": true
     }
   ]
