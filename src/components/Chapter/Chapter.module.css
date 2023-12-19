@@ -1,7 +1,5 @@
 .container {
-  max-height: calc(
-    calc(var(--vh, 1vh) * 100) - 68px - 8px - var(--progressBarHeight) - 80px - var(--creditsHeight)
-  );
+  max-height: calc(calc(var(--vh, 1vh) * 100) - 68px - 8px - var(--progressBarHeight) - 80px);
   overflow-y: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -111,6 +109,10 @@
 .sections ul li {
   margin-left: 20px;
   margin-bottom: 16px;
+}
+
+.center {
+  text-align: center;
 }
 
 @media screen and (max-width: 375px) {

@@ -27,12 +27,12 @@
   width: calc(100% - 16px - 16px);
   height: fit-content;
   min-height: 60px;
-  max-height: calc(calc(var(--vh, 1vh) * 100) - 68px - 32.5px - var(--creditsHeight));
+  max-height: calc(calc(var(--vh, 1vh) * 100) - 68px - 32.5px);
   border-radius: 8px;
   box-sizing: border-box;
   transition: transform 0.5s ease-in-out;
   transform: translate(-50%, -100%);
-  top: calc(100% - 68px - 16px - var(--creditsHeight));
+  top: calc(100% - 68px - 16px);
   overflow-y: scroll;
   z-index: 5;
 }

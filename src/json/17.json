@@ -1,0 +1,23 @@
+{
+  "title": "",
+  "subtitle": "",
+  "description": "",
+  "sections": [
+    {
+      "contentType": "text",
+      "textType": "normal",
+      "textAlign": "center",
+      "content": "Con el apoyo de la Cooperación Internacional"
+    },
+    {
+      "hideDownload": true,
+      "contentType": "image",
+      "src": "/assets/img/Frame851340937.png",
+      "heigth": 1428,
+      "alt": "Con el apoyo de la Cooperación Internacional"
+    }
+  ],
+  "quiz": {
+    "hasQuiz": false
+  }
+}

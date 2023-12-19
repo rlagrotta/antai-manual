@@ -37,11 +37,13 @@ const ListComponent: React.FC<ListContent> = ({ items }) => {
 const SectionComponent: React.FC<Section> = ({
   contentType,
   textType,
+  textAlign,
   content,
   url,
   src,
   alt,
   heigth,
+  hideDownload,
 }) => {
   const handleDownload = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     event.preventDefault();
@@ -58,7 +60,7 @@ const SectionComponent: React.FC<Section> = ({
           <MixedTextComponent content={content as TextContent[]} />
         </p>
       ) : (
-        <p className={styles.text}>
+        <p className={`${styles.text} ${textAlign ? styles[textAlign] : ''}`}>
           <TextComponent textType={textType as 'bold' | 'normal'} content={content as string} />
         </p>
       );
@@ -69,10 +71,12 @@ const SectionComponent: React.FC<Section> = ({
         <figure>
           <div className={styles.imageContainer}>
             <img className={styles.image} src={src as string} alt={alt as string} />
-            <div className={styles.downloadContainer} onClick={handleDownload} aria-hidden="true">
-              <div className={styles.downloadIcon}></div>
-              <span className={styles.downloadText}>Descargar</span>
-            </div>
+            {!hideDownload && (
+              <div className={styles.downloadContainer} onClick={handleDownload} aria-hidden="true">
+                <div className={styles.downloadIcon}></div>
+                <span className={styles.downloadText}>Descargar</span>
+              </div>
+            )}
           </div>
         </figure>
       );

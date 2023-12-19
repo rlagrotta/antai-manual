@@ -95,6 +95,12 @@
       "slug": "buenas-practicas",
       "title": "Buenas Prácticas",
       "hasQuiz": true
+    },
+    {
+      "id": 17,
+      "slug": "reconocimiento",
+      "title": "Reconocimiento",
+      "hasQuiz": false
     }
   ]
 }

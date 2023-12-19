@@ -3,6 +3,7 @@ import { QuizData } from './Quiz';
 
 export interface TextContent {
   textType: 'bold' | 'normal';
+  textAlign?: 'center' | 'left' | 'right';
   content: string;
 }
 
@@ -17,11 +18,13 @@ export interface ListContent {
 export interface Section {
   contentType: 'text' | 'list' | 'link' | 'image' | 'break';
   textType?: 'bold' | 'normal' | 'mixed';
+  textAlign?: 'center' | 'left' | 'right';
   content?: string | TextContent[] | ListContent[];
   url?: Url;
   src?: string;
   alt?: string;
   heigth?: number;
+  hideDownload?: boolean;
 }
 
 export interface Chapter {

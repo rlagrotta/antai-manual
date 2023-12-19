@@ -195,9 +195,9 @@ const Footer = () => {
           )}
         </nav>
 
-        <p className={styles.credits} ref={creditsRef}>
+        {/* <p className={styles.credits} ref={creditsRef}>
           Con el apoyo del Instituto Republicano Internacional y la Embajada de los Estados Unidos.
-        </p>
+        </p> */}
       </footer>
       <BottomSheet isOpen={menuOpen} onClose={closeMenu}>
         <ul className={styles.menuList}>
@@ -209,7 +209,7 @@ const Footer = () => {
               }`}
             >
               <Link href={`/page/${chapter.id}/${chapter.slug}`} onClick={closeMenu} prefetch>
-                {chapter.title}
+                {chapter.id}. {chapter.title}
               </Link>
             </li>
           ))}
