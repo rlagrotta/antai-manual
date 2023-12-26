@@ -40,7 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <title>
-        MANUAL DE FUNCIONES Y PROCEDIMIENTOS DEL OFICIAL DE INFORMACIÓN - AUTORIDAD NACIONAL DE
+          Manual de Procedimientos y Lineamientos del Oficial de Información - AUTORIDAD NACIONAL DE
           TRANSPARENCIA Y ACCESO A LA INFORMACION
         </title>
       </head>
